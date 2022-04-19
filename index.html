@@ -33,7 +33,7 @@
     <div class="scene3D-container">
       <div class="scene3D">
         <div class="card">
-          <a href="#">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cardModal">
             <img src="./assets/images/users/user_01.png" class="img-fluid imgCard" alt="user 1">
           </a>
         </div>
@@ -150,6 +150,30 @@
       </div>
     </div>
   </div>
+  <!-- modal content -->
+  <!-- Modal -->
+  <div class="modal fade cardModal" id="cardModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-one">
+        <div class="modal-body">
+          <button type="button" class="close closeModal" data-bs-dismiss="modal" aria-label="Close">
+            <img src="./assets/images/closeButton.svg" class="img-fluid menuCloseButton" loading="lazy" alt="modal Close Button">
+          </button>
+          <div class="row">
+            <div class="col-4">
+              <p>Our future together means:</p>
+              <h2>Swimming in an ocean free of plastic.</h2>
+              <h1>Nick, <regular>16.</regular></h1>
+            </div>
+            <div class="col-8">
+              <img src="./assets/images/userCard.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript -->
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
   <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
