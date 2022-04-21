@@ -246,6 +246,12 @@ body.modal-open> :not(.modal) {
   padding: 0;
 }
 
+.cardModal .modal-content {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 0.3rem;
+}
+
 .cardModal .modal-body {
   position: relative;
   flex: 1 1 auto;
