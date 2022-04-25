@@ -438,7 +438,7 @@ label {
 
 .searchInput {
   border: none;
-  padding: 1.125rem 1rem;
+  padding: 1.125rem 2rem;
   width: 70%;
   font-family: "Inter Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
