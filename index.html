@@ -30,6 +30,38 @@
 
 <body>
   <div class="viewport">
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Pulse Of Our Future</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">On-Display</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">What's Collab</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Visit Collab</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="iconMapContent">
+      <a href="#">
+        <p class="textMap">Map View</p>
+        <img src="./assets/images/iconMap.svg" class="img-fluis iconMap" alt="">
+      </a>
+    </div>
     <div class="scene3D-container">
       <div class="scene3D">
         <div class="card">
@@ -167,24 +199,24 @@
     <div class="section">
       <img src="./assets/images/STEMNight.jpg" class="img-fluid" alt="">
     </div>
+    <!-- footer -->
+    <footer id="sticky-footer" class="flex-shrink-0">
+      <div class="row">
+        <div class="col-8 float-left">
+          <ul Class="list-group list-group-horizontal">
+            <li class="list-group-item">This week</li>
+            <li class="list-group-item">On-Display</li>
+            <li class="list-group-item">What's Collab</li>
+            <li class="list-group-item">Visit Collab<green>We're open</green>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4 float-right">
+          <img src="./assets/images/logo.svg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </footer>
   </div>
-  <!-- footer -->
-  <footer id="sticky-footer" class="flex-shrink-0">
-    <div class="row">
-      <div class="col-8 float-left">
-        <ul Class="list-group list-group-horizontal">
-          <li class="list-group-item">This week</li>
-          <li class="list-group-item">On Display</li>
-          <li class="list-group-item">What's Collab</li>
-          <li class="list-group-item">Visit Collab<green>We're open</green>
-          </li>
-        </ul>
-      </div>
-      <div class="col-4 float-right">
-        <img src="./assets/images/logo.svg" class="img-fluid" alt="">
-      </div>
-    </div>
-  </footer>
   <!-- modal content -->
   <!-- Modal -->
   <div class="modal fade cardModal" id="cardModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -224,6 +256,26 @@
 
   <!-- Custom scripts for this template -->
   <script src='./assets/js/balloc.js'></script>
+
+  <script type="text/javascript">
+    $(function() {
+
+      var triggerTop = $(".viewport").offset().top;
+      var triggerBottom = triggerTop + $(".viewport").height();
+      var map = $('.iconMapContent');
+      var menu = $('.navbar');
+
+      $(window).scroll(function() {
+          var curentScroll = $(window).scrollTop();
+          var isSticky = curentScroll > triggerTop && curentScroll < triggerBottom
+          map.toggleClass('stickyMap', isSticky);
+          menu.toggleClass('stickyMenu', isSticky);
+        })
+        .resize(function() {
+          size = $(window).height();
+        });
+    });
+  </script>
 </body>
 
 </html>
