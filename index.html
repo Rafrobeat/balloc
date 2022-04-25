@@ -30,6 +30,9 @@
 
 <body>
   <div class="viewport">
+    <div class="scrollButtonContent">
+      <p class="fade-in-text">Scroll down to site</p>
+    </div>
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -269,12 +272,14 @@
       var triggerBottom = triggerTop + $(".viewport").height();
       var map = $('.iconMapContent');
       var menu = $('.navbar');
+      var textScroll = $('.scrollButtonContent');
 
       $(window).scroll(function() {
           var curentScroll = $(window).scrollTop();
           var isSticky = curentScroll > triggerTop && curentScroll < triggerBottom
           map.toggleClass('stickyMap', isSticky);
           menu.toggleClass('stickyMenu', isSticky);
+          textScroll.toggleClass('stickyScrollButtonContent', isSticky);
         })
         .resize(function() {
           size = $(window).height();
