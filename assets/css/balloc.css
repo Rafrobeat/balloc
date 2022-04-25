@@ -421,6 +421,29 @@ a:hover img, button:hover img {
   margin-bottom: 3rem;
 }
 
+.section.buttons {
+  padding: 2.5rem;
+}
+
+.section.buttons .btn-primary {
+  background: transparent;
+  border: none;
+  font-family: "Cabin Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #5D00B4;
+  padding: 1rem 1.5rem;
+  margin-right: 2rem;
+}
+
+.section.buttons .btn-primary.active {
+  color: #FFFFFF;
+  background: #623493;
+}
+
 .search {
   width: 100%;
   padding: 2.5rem;
